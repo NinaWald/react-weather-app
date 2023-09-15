@@ -1,9 +1,12 @@
 import React from 'react'
+import Weather from './components/Weather'
+import Forecast from './components/Forecast'
 
 export const App = () => {
   return (
     <div>
-      Find me in src/app.js!
+      <Weather />
+      <Forecast />
     </div>
   )
 }
