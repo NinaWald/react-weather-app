@@ -2,27 +2,27 @@
 
 import React, { useState, useEffect } from 'react';
 import apiService from '../apiService'; // Import your API service
+import '../forecast.css'
 
-const Forecast = () => {
-  const [forecastData, setForecastData] = useState(null);
+const Forecast = ({ currentCityIndex, cities }) => {
+  const [forecastData, setForecastData] = useState([]);
 
   useEffect(() => {
     // Make the API call when the component mounts
-    apiService.fetchForecastData('Stockholm', 'Sweden')
+    apiService.fetchForecastData(currentCityIndex, 'Sweden')
       .then((data) => {
         const fiveDayForecast = data.list.filter((day) => day.dt_txt.includes('12:00'));
         console.log('Filtered Forecast Data:', fiveDayForecast); // Debug output
         setForecastData(fiveDayForecast);
       })
       .catch((error) => console.error(error));
-  }, []);
+  }, [cities, currentCityIndex]);
 
   return (
     <div>
-      <h2>5-Day Forecast</h2>
       <div className="forecast">
         {forecastData && forecastData.map((day) => (
-          <div key={day.dt}>
+          <div className="day-temp" key={day.dt}>
             <p className="forecast-day">
               {new Date(day.dt * 1000).toLocaleDateString('en-EN', {
                 weekday: 'long'

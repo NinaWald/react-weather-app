@@ -1,0 +1,23 @@
+.forecast {
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+}
+
+.day-temp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.forecast-day {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.forecast-temp {
+    display: flex;
+    align-items: center;
+}

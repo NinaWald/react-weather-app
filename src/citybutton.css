@@ -1,0 +1,22 @@
+.button-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-end; /* Align the button to the right */
+  }
+  
+  .round-button {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(113, 198, 219);
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    margin-right: 50px; /* Optional margin for spacing */
+  }
+  
+  
