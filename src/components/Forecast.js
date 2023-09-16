@@ -11,6 +11,7 @@ const Forecast = () => {
     apiService.fetchForecastData('Stockholm', 'Sweden')
       .then((data) => {
         const fiveDayForecast = data.list.filter((day) => day.dt_txt.includes('12:00'));
+        console.log('Filtered Forecast Data:', fiveDayForecast); // Debug output
         setForecastData(fiveDayForecast);
       })
       .catch((error) => console.error(error));
@@ -26,9 +27,12 @@ const Forecast = () => {
               {new Date(day.dt * 1000).toLocaleDateString('en-EN', {
                 weekday: 'long'
               })}
+              <img
+                src={`https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`}
+                alt={day.weather[0].description} />
             </p>
             <p className="forecast-temp">
-              {Math.round(day.main.temp * 10) / 10} °C
+              {Math.round(day.main.temp_max)}°C
             </p>
           </div>
         ))}

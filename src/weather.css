@@ -1,0 +1,45 @@
+.today-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    height: 520px;
+    border-top-left-radius: 0; 
+    border-top-right-radius: 0; 
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px; 
+}
+.today-weather {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.day-icon img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 250px;
+}
+
+.sunrise-set {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.today-container.daytime {
+    background-color: rgb(162, 223, 241);
+  }
+  .today-container.nighttime {
+    background-color: rgb(30, 30, 170);
+  }
+
+  .temperature {
+    font-size: 90px;
+    margin-bottom: 0;
+  }
+  .location {
+    font-size: 40px;
+    margin-top: 0;
+  }
