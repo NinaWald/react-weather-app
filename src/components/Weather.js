@@ -73,7 +73,9 @@ const Weather = () => {
         </>
       )}
       <CityButton toggleCity={toggleCity} />
-      <Forecast cities={cities} currentCityIndex={currentCityIndex} />
+      <Forecast
+        currentCity={cities[currentCityIndex]}
+        country="Sweden" />
     </div>
   );
 }

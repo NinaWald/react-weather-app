@@ -4,19 +4,18 @@ import React, { useState, useEffect } from 'react';
 import apiService from '../apiService'; // Import your API service
 import '../forecast.css'
 
-const Forecast = ({ currentCityIndex, cities }) => {
+const Forecast = ({ currentCity, country }) => {
   const [forecastData, setForecastData] = useState([]);
 
   useEffect(() => {
-    // Make the API call when the component mounts
-    apiService.fetchForecastData(currentCityIndex, 'Sweden')
+    // Make the API call when the component mounts and whenever the city or country changes
+    apiService.fetchForecastData(currentCity, country)
       .then((data) => {
         const fiveDayForecast = data.list.filter((day) => day.dt_txt.includes('12:00'));
-        console.log('Filtered Forecast Data:', fiveDayForecast); // Debug output
         setForecastData(fiveDayForecast);
       })
       .catch((error) => console.error(error));
-  }, [cities, currentCityIndex]);
+  }, [currentCity, country]);
 
   return (
     <div>
