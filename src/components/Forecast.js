@@ -18,24 +18,23 @@ const Forecast = ({ currentCity, country }) => {
   }, [currentCity, country]);
 
   return (
-    <div>
-      <div className="forecast">
-        {forecastData && forecastData.map((day) => (
-          <div className="day-temp" key={day.dt}>
-            <p className="forecast-day">
-              {new Date(day.dt * 1000).toLocaleDateString('en-EN', {
-                weekday: 'long'
-              })}
-              <img
-                src={`https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`}
-                alt={day.weather[0].description} />
-            </p>
-            <p className="forecast-temp">
-              {Math.round(day.main.temp_max)}°C
-            </p>
-          </div>
-        ))}
-      </div>
+    <div className="forecast">
+      {forecastData && forecastData.map((day) => (
+        <div className="day-temp" key={day.dt}>
+          <p className="forecast-day">
+            {new Date(day.dt * 1000).toLocaleDateString('en-EN', {
+              weekday: 'long'
+            })}
+            <img
+              src={`https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`}
+              alt={day.weather[0].description} />
+          </p>
+          <p className="forecast-temp">
+            {Math.round(day.main.temp_max)}°C
+          </p>
+        </div>
+      ))}
+
     </div>
   );
 }
