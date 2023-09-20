@@ -5,7 +5,7 @@ import CityButton from './CityButton';
 import Forecast from './Forecast';
 import '../weather.css';
 
-const cities = ['Stockholm', 'London', 'New York', 'Tokyo', 'Helsinki']; // Add your list of cities
+const cities = ['Stockholm', 'London', 'New York', 'Tokyo', 'Helsinki', 'Rome', 'Rhodes']; // Add your list of cities
 
 const Weather = () => {
   const [weatherData, setWeatherData] = useState(null);

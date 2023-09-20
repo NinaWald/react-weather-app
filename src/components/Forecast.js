@@ -30,7 +30,7 @@ const Forecast = ({ currentCity, country }) => {
               alt={day.weather[0].description} />
           </p>
           <p className="forecast-temp">
-            {Math.round(day.main.temp_max)}°C
+            {Math.round(day.main.temp_max)}°
           </p>
         </div>
       ))}
