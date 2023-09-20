@@ -3,8 +3,6 @@ import React, { useState, useEffect } from 'react';
 import apiService from '../apiService'; // Import your API service
 import CityButton from './CityButton';
 import Forecast from './Forecast';
-import dayImage from '../images/day.png'
-import nightImage from '../images/moon.png'
 import '../weather.css';
 
 const cities = ['Stockholm', 'London', 'New York', 'Tokyo', 'Helsinki']; // Add your list of cities
@@ -48,20 +46,20 @@ const Weather = () => {
         <>
           <div className="today-weather">
             <div className="temp-city">
-              <p className="temperature">{Math.round(weatherData.main.temp)}°C</p>
+              <p className="temperature">{Math.round(weatherData.main.temp)}°</p>
               <p className="location">{weatherData.name}</p>
-              <p className="condition">{weatherData.weather[0].description}</p>
+              {/* <div className="day-icon">
+                {isDaytime(weatherData.dt) ? (
+                  <h2>day</h2>
+                ) : (
+                  <h2>night</h2>
+                )}
+              </div> */}
             </div>
             <div className="day-icon">
-              {isDaytime(weatherData.dt) ? (
-                <img
-                  src={dayImage}
-                  alt="Day" />
-              ) : (
-                <img
-                  src={nightImage}
-                  alt="Night" />
-              )}
+              <img
+                src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
+                alt={weatherData.weather[0].description} />
             </div>
           </div>
           <div className="rise">

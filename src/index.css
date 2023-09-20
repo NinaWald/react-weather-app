@@ -5,11 +5,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  max-width: 600px;
   margin: 0 auto;
+  height: auto;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+/* App.css */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center contents horizontally */
+}
+
+
+

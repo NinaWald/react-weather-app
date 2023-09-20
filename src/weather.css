@@ -2,13 +2,16 @@
     display: flex;
     flex-direction: column;
     padding: 50px 15px 0 15px;
-    height: 550px;
+    height: 650px;
+    max-width: 400px;
     border-top-left-radius: 0; 
     border-top-right-radius: 0; 
     border-bottom-left-radius: 200px;
     border-bottom-right-radius: 200px; 
     
 }
+
+
 .today-weather {
     display: flex;
     flex-direction: row;
@@ -17,7 +20,7 @@
 }
 
 .day-icon img {
-    width: 150px;
+    width: 200px;
     height: auto;
     margin-bottom: 250px;
 }
@@ -43,6 +46,6 @@
     margin-bottom: 0;
   }
   .location {
-    font-size: 40px;
+    font-size: 30px;
     margin-top: 0;
   }
