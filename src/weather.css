@@ -10,6 +10,9 @@
     border-top-right-radius: 0; 
     border-bottom-left-radius: 200px;
     border-bottom-right-radius: 200px; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     
 }
 
@@ -52,3 +55,5 @@
     font-size: 30px;
     margin-top: 0;
   }
+
+  
