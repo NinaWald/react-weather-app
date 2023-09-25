@@ -23,7 +23,7 @@ const Forecast = ({ currentCity, country }) => {
         <div className="day-temp" key={day.dt}>
           <p className="forecast-day">
             {new Date(day.dt * 1000).toLocaleDateString('en-EN', {
-              weekday: 'long'
+              weekday: 'short'
             })}
             <img
               src={`https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`}

@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import apiService from '../apiService'; // Import your API service
 import CityButton from './CityButton';
 import Forecast from './Forecast';
+import sunSet from '../images/sunset.png'
+import sunRise from '../images/sunrise.png'
 import '../weather.css';
 
 const cities = ['Stockholm', 'London', 'New York', 'Tokyo', 'Helsinki', 'Rome', 'Rhodes']; // Add your list of cities
@@ -64,8 +66,8 @@ const Weather = () => {
           </div>
           <div className="rise">
             <div className="sunrise-set">
-              <p>sunrise {formatTime(weatherData.sys.sunrise)}</p>
-              <p>sunset {formatTime(weatherData.sys.sunset)}</p>
+              <p><img src={sunRise} alt="Sunrise icon" /> {formatTime(weatherData.sys.sunrise)}</p>
+              <p><img src={sunSet} alt="Sunset icon" /> {formatTime(weatherData.sys.sunset)}</p>
             </div>
           </div>
         </>

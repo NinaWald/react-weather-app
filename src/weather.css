@@ -4,8 +4,10 @@
     padding: 0 15px 0 15px;
     margin-left: 10px;
     margin-right: 10px;
-    height: 500px;
+    height: 540px;
     width: 370px;
+    border: solid 1px black;
+    border-top: none;
     border-top-left-radius: 0; 
     border-top-right-radius: 0; 
     border-bottom-left-radius: 200px;
@@ -14,6 +16,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     
+}
+
+img {
+  width: 35px;
+  height: 35px;
 }
 
 .forecast-container {
